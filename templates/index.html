@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+    <h2>Hello, {{ user.username }}!</h2>
+{% else %}
+    <p>Welcome to our site! Please
+        <a href="{% url 'login' %}">login</a>
+        or
+        <a href="{% url 'signup' %}">sign up</a>
+    </p>
+{% endif %}
+</body>
+</html>
